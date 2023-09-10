@@ -19,5 +19,5 @@ steps:
     args: ['run', 'deploy', 'spring-cloud-gcp-logging-image', '--image', 'asia-southeast1-docker.pkg.dev/spring-gcp-sql-storage/spring-cloud-gcp-logging-masterclass/spring-cloud-gcp-logging-image:latest', '--region', 'asia-southeast1']
     
 # Logs capture in cloud logging
-    #options:
-      #logging: CLOUD_LOGGING_ONLY
+options:
+  logging: CLOUD_LOGGING_ONLY
