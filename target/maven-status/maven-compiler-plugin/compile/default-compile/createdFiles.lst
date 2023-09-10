@@ -1,0 +1,5 @@
+com\springcavaj\gcp\logger\excpetion\SpringGCPLoggerException.class
+com\springcavaj\gcp\logger\controller\SpringGCPLoggerController.class
+com\springcavaj\gcp\logger\model\User.class
+com\springcavaj\gcp\logger\SpringGCPLoggerMasterclassApplication.class
+com\springcavaj\gcp\logger\service\SpringGCPLoggerValidationService.class

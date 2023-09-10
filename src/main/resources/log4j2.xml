@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Appenders>
+		<!-- Console Appender -->		
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [%t] %c{2} - %m%n" />
+		</Console>
+		
+		<!-- Rolling File Appender -->
+		<RollingFile name="RollingFile" fileName="logs/gcp-stackdriver-logging.log" filePattern="logs/$${date:yyyy-MM-dd}/gcp-stackdriver-logging-%d{-MM-dd-yyyy}-%i.log.zip">
+			<ThresholdFilter level="INFO" />
+			<PatternLayout pattern="%d{yyyy-MM-dd HZH:mm:ss.SSS} %-5p [%t] %c{2} - %m%n" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="200 MB" />
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	
+	<Loggers>
+		<Root level="INFO" includeLoaction="true">
+			<AppenderRef ref="Console" />
+		</Root>
+		<Logger name="com.springcavaj.gcp.logger" level="TRACE" additivity="false" includeLoaction="true">
+			<AppenderRef ref="RollingFile" />
+			<AppenderRef ref="Console" />
+		</Logger>
+	</Loggers>
+</Configuration>
