@@ -21,3 +21,4 @@ steps:
 # Logs capture in cloud logging
     options:
       logging: CLOUD_LOGGING_ONLY
+    serviceAccount: 74147126988-compute@developer.gserviceaccount.com
