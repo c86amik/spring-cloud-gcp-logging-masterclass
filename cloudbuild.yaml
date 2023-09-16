@@ -16,7 +16,7 @@ steps:
 # Deploy the container image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: ['run', 'deploy', 'spring-cloud-gcp-logging-image', '--image', 'asia-south1-docker.pkg.dev/spring-gcp-sql-storage/spring-cloud-gcp-logging-masterclass/spring-cloud-gcp-logging-image:latest', '--region', 'asia-south1']
+    args: ['run', 'deploy', 'spring-cloud-gcp-logging-image', '--image', 'asia-south1-docker.pkg.dev/spring-gcp-sql-storage/spring-cloud-gcp-logging-masterclass/spring-cloud-gcp-logging-image:latest', '--region', 'us-central1']
     
 # Logs capture in cloud logging
 options:

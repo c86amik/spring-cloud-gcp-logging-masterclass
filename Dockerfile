@@ -5,7 +5,7 @@ VOLUME tmp
 ADD target/*.jar spring-cloud-gcp-logging-masterclass-0.1.jar
 
 # Expose the port your application listens on
-EXPOSE 7123
+EXPOSE 7124
 ENV JAVA_OPTS=""
 # Define the command to run your application
 ENTRYPOINT [ "sh" "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /spring-cloud-gcp-logging-masterclass-0.1.jar" ]
